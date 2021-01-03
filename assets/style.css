@@ -1,0 +1,24 @@
+#login_page{
+  display:flex;
+
+
+}
+.card1{
+    margin: auto;
+    margin-top: 119px;
+}
+
+#banner{
+    /* background-image: url('C:\xampp\htdocs\pract8\images\img1.jpg'); */
+    background-image: url('../images/img1.jpg')  ;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    height:30rem;
+    width:100%;
+    background-color: red;
+}
+
+#product{
+    background-color: yellow;
+    padding: 20px;
+}
