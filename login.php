@@ -1,85 +1,71 @@
-<?php include('cont.php') ?>
-<?php include('header.php') ?>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<?php  include('menu.php'); ?>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-<section id="login_page">
-   <div class="container">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container">
       <div class="row">
-          <div class="col-md-5 card1">
-               <div class="card card1">
-                  <div class="card-body">
-                      <h1>Login Here</h1>
-                     <form action="#" method="POST">
-
-                       <div class="from-group">
-                         <label for=""> USER : </label>
-                         <input type="text" name="user" class="form-control" id="user">
-                       </div>
-                     
-                       <div class="from-group">
-                         <label for=""> Passward : </label>
-                         <input type="password" name="passward" class="form-control" id="passward">
-                       </div>
-
-                       <div class="from-group my-2">
-                         <input type="submit" name="submit" class="form-control bg-primary" >
-                       </div>
-                       <div id="message"></div>
-                     </form>
-                  
-                  
-                  </div>
-               </div>    
-              </form>
-          </div>
+        <div class="col-md-12">
+          <h1 class="text-center">Login Here</h1>
+        </div>
       </div>
-   </div>
-</section>
+      <div class="row d-flex flex-row justify-content-center">
+         <div class="col-md-5 border p-4">
+              <form action="">
+                <div class="form-group row">
+                  <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                  <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputEmail3" class="col-sm-2 col-form-label">Password</label>
+                  <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputEmail3" class="col-sm-2 col-form-label">Contact</label>
+                  <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  
+                  <div class="col-sm-4">
+                    <input type="submit" class="form-control" id="inputEmail3" placeholder="Email">
+                  </div>
+                </div>
+              </form>
 
-<?php
-
-if(isset($_POST['submit'])){
- 
-    $con = mysqli_connect('localhost','root','','pract8');
-
-    $user = $_POST['user'];
-    
-    $passward = $_POST['passward'];
-
-
-    $sql = "SELECT * FROM `login` WHERE `user`= '$user' AND `passward` ='$passward'";
-
-
-    $result = mysqli_query($con,$sql);
-
-     $run = mysqli_num_rows($result);
-
-     if($run<1){
-        ?>
-        <script>
-          alert("sorry! wrong username and passward ");
-        // document.getElementById('message').innerHTML ="sorry ! your credentials is not right..";
-          window.open('login.php','_self');
-        </script>
-        <?php
-
-     } else{
-        $data = mysqli_fetch_assoc($result);
-
-        $id = $data['id'];
-          header('location:dashboard.php');
-      
-     }
-
-}
-
-?>
-
-<?php include('footer.php') ?>
+         </div>
+      </div>
+    </div>
 
 
+    <section id="footer" class="bg-primary fixed-bottom">
+      <div class="container">
+        <div class="row ">
+           <div class="col-md-12">
+             helo
+           </div>
+        </div>
+      </div>
+    </section>
+     
 
-
-
-
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
